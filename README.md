@@ -1,9 +1,9 @@
 # Outfit_Recommendation_Project
 
 __Project Proposal__
-Kefan Ping and Chengwei Hu
+<br> - Chengwei Hu <br> - Kefan Ping
 
-1. __Abstract__: (In 2-4 sentences, describe what problem the project addresses, and the overall approach you will use to solve that problem). We will build an outfit recommendation system/web app. This system will read the user's specific folder in a specific location on the local computer to obtain the photo of the outfit owned by the user. 
+1. __Abstract__: (In 2-4 sentences, describe what problem the project addresses, and the overall approach you will use to solve that problem). We will build an outfit recommendation system/web app. This system will read the user's specific folder in a specific location on the local computer to obtain the photo of the outfit owned by the user. After recognizing the outfits owned by the user, recommend several style matching options for the user to choose by deep learning. This project will also recommend new clothes in their favorite styles to users through methods such as network scraping and NLP.
 2. __Planned Deliverables__: Concisely what you are going to create and what capabilities it will have. Are you making a webapp? A Python package for others to use? Code that creates a novel data set? Etc. Please consider two scenarios:
 “Full success.” What will your deliverable be if everything works out for you exactly as you plan?
 “Partial success.” What useful deliverable will you be able to offer even if things don’t 100% work out? For example, maybe you aren’t able to get that webapp together, but you can still create a code repository that showcases the machine learning pipeline needed to use to support the app. Have a contingency plan!
