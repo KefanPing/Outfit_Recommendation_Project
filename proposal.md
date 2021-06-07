@@ -1,6 +1,4 @@
-# Outfit Recommendation Project
-
-__Project Proposal__
+# Outfit Recommendation Project Proposal
 
 1. __Abstract__: We will build an outfit recommendation local app. This app will be able to read a photo path of a outfit owned by the user. After recognizing the several information outfits owned by the user, recommend several style matching options for the user to choose by deep learning. This project will also recommend new outfits in user's favorite styles to them through methods such as web scraping and Natural language processing from shopping website and fashion forum.
 2. __Planned Deliverables__: We plan that the final result will be a local app. Its workflow is: users save photos of their own clothes in a specific local path, and the app can extract these photos with the user's permission, and recognize the type, color, and even brand of the clothes through deep learning. Finally, it will generate some clothes matching according to different styles for users to choose. In a more advanced version, it will obtain the latest information in the fashion industry through web scraping, and recommend new clothes based on the user’s favorite style.
