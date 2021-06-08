@@ -294,3 +294,19 @@ def find_combo_by_top(top_color_group, combotype):
             shoes_color_group = 6
             
     return (bottom_color_group , shoes_color_group)
+
+
+# Since one of the factors in our clothes recommendation is the season, 
+# we extract the current real season and match it with all the clothes stored in the app.
+# This means that we only recommend clothes that are suitable for the current season
+from datetime import date
+todays_date = date.today()
+tomonth = todays_date.month
+if tomonth in [3,4,5]:
+    toseason = "Spring"
+elif tomonth in [6,7,8]:
+    toseason = "Summer"
+elif tomonth in [9,10,11]:
+    toseason = "Fall"
+else:
+    toseason = "Winter"
