@@ -10,6 +10,7 @@ Original file is located at
 # packages in this training file
 
 from training_module import *
+from ui_module import group_color
 
 import tensorflow as tf
 from tensorflow import keras
