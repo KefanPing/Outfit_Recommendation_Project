@@ -9,6 +9,8 @@ Original file is located at
 
 # packages in this training file
 
+from training_module import *
+
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.preprocessing import image
