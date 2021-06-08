@@ -68,31 +68,20 @@ def get_df():
   this function get and clean the data, return a dataframe
   """
     styles = pd.read_csv("styles.csv", error_bad_lines=False)
-    styles = styles.drop(["productDisplayName"],axis = 1)
-    styles = styles.drop(["year"],axis = 1)
-    styles = styles[(styles.masterCategory=='Apparel')| (styles.masterCategory=='Footwear')]
-    styles = styles.drop(styles[styles["subCategory"] == "Innerwear"].index)
-    styles = styles.dropna()
-    styles = df_drop(styles,"subCategory", ["Apparel Set", "Dress","Loungewear and Nightwear","Saree","Socks"])
-    styles["subCategory"] = styles["subCategory"].transform(lambda x: "Footwear" if(x in ["Shoes","Flip Flops","Sandal"]) else x)
-    styles = styles.drop(labels=[6695,16194,32309,36381,40000], axis=0)
-    #styles = styles[styles.subCategory == x]
-    group_color(styles)
+    styles = styles.drop(["productDisplayName"],axis = 1) #drop useless column, we do not need name to do recommendation
+    styles = styles.drop(["year"],axis = 1) #drop useless column, we do not need year to do recommendation
+    styles = styles[(styles.masterCategory=='Apparel')| (styles.masterCategory=='Footwear')] # drop useless rows, we are not recommend acessories
+    styles = styles.drop(styles[styles["subCategory"] == "Innerwear"].index) # drop useless row, we are not recommend innerwears, only outfits.
+    styles = styles.dropna() # drop NA
+    styles = df_drop(styles,"subCategory", ["Apparel Set", "Dress","Loungewear and Nightwear","Saree","Socks"]) # we only recommend outfits.
+    styles["subCategory"] = styles["subCategory"].transform(lambda x: "Footwear" if(x in ["Shoes","Flip Flops","Sandal"]) else x) # Group them into one category.
+    styles = styles.drop(labels=[6695,16194,32309,36381,40000], axis=0) # drop incomplete rows
+    group_color(styles) # group the color in to color-wheel
     return styles
 
 styles = get_df()
 
-styles = styles.dropna()
-
-
-
-styles = df_drop(styles,"subCategory", ["Apparel Set", "Dress","Loungewear and Nightwear","Saree","Socks"])
-
-styles["subCategory"] = styles["subCategory"].transform(lambda x: "Footwear" if(x in ["Shoes","Flip Flops","Sandal"]) else x)
-
-styles["subCategory"].unique()
-
-styles[styles.gender=="Women"].head()
+styles["subCategory"].unique() # we can check by this code that we only have three subcategory now.
 
 """# Model-1: """
 
