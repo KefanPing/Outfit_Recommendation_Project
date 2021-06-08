@@ -4,4 +4,4 @@ In this app, users can choose to add a photo from their own computer (we need us
 
 We provide users with a "Generate Today's Outfit Recommendations" button, which can provide users with recommendations. The recommended result is composed of three pictures, namely top, bottom, and shoes. Of course, these three pictures are the user's own clothes.
 
-![pictures/截屏2021-06-02 08.27.35.png]("pictures/截屏2021-06-02 08.27.35.png")
+![https://github.com/kefanping/Outfit_Recommendation_Project/pictures/截屏2021-06-02 08.27.35.png](https://github.com/kefanping/Outfit_Recommendation_Project/pictures/截屏2021-06-02 08.27.35.png)
