@@ -4,8 +4,8 @@ from PyQt5.QtCore import QFileInfo
 from PyQt5.QtWidgets import QFileDialog,QLabel
 from PyQt5.QtGui import *
 
-import ui_module # see ui_module.py
-
+# see ui_module.py
+from ui_module import *
 
 # Since one of the factors in our clothes recommendation is the season, 
 # we extract the current real season and match it with all the clothes stored in the app.
