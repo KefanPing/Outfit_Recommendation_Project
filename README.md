@@ -18,7 +18,7 @@
 
 <h2 id="0">0.Group contribution</h2>
 
-<h2 id="1">1. Intro</h2> Do you sometimes (definitely not during the final exam week) stand in front of the closet and think deeply about "what should I wear today?", "how do I match clothes today to make me more fashionable?". Everyone has different fashion concepts, and what a person wears can clearly show how that person's character and taste are. For people who don't have time to think about this, they may need to use an app to improve their sense of fashion, such as an outfit recommendation app. In general, we have implemented such a local app which can store photo of clothes owned by users and recommend what to wear (top, bottom, and shoes) today.
+<h2 id="1">1. Intro</h2> Do you sometimes (definitely not during the final exams week) stand in front of your closet and think deeply about "what should I wear today?!", "how do I pair up clothes today to make me more fashionable?!". Everyone defines fashion personally, but there are always some methods and ways that are fashionable for most people. What a person wears can also clearly show how that person's character and taste are. For people who don't have time to think about this, they may need to use an app to improve their sense of fashion, such as an outfit recommendation app. In general, we have implemented such a local app which can store photo of clothes owned by users and recommend what to wear (top, bottom, and shoes) today.
 
 <br>
 <h2 id="2">2. Use the app</h2> In this app, users can choose to add a photo from their own computer (we need users to take a photo of their own clothes and store it in the computer) to our app. In the process of adding pictures, this picture will be automatically recognized by our pre-trained model at one time, by type (such as T-shirt), gender (such as women), color (such as navy blue), season (such as summer), usage (such as formal, casual, sport, etc.), and path of the photo. These six types of information will be stored in the app and displayed for the user's reference. Considering that our model is sometimes inaccurate, and in order to facilitate user operations, we also provide users with editing and deleting buttons. Therefore, the user can edit the information we misidentified or delete a piece of clothing.
@@ -68,6 +68,7 @@ c) Then you will see the app!
 <h2 id="7">7. Repo structure</h2>
 
 ```
+.
 ├── A special explanation for data cleaning and analysis(bias).ipynb   # A note that analyzes bias of the data set used in this project
 ├── LICENSE   # The lisence
 ├── README.md   # The readme file
