@@ -69,9 +69,9 @@ c) Then you will see the app!
 
 ```
 ├── A special explanation for data cleaning and analysis(bias).ipynb   # A note that analyzes bias of the data set used in this project
-├── LICENSE   # Lisence
+├── LICENSE   # The lisence
 ├── README.md   # The readme file
-├── models   # This folder 
+├── models   # This folder contains everything related to the models: data, models themselves, training code
 │   ├── data   # Data for training models from Kaggle
 │   ├── models   # A google drive folder which contains our trained models
 |   │   ├── model_sub   # A model that distinguishes tops, bottoms, and shoes
@@ -87,6 +87,6 @@ c) Then you will see the app!
 │   └── tutorial.png   
 ├── proposal.md   # Our original proposal
 └── py   # All you need to run the app
-    ├── recognition_module.py   # A module which contains functions and classes that our GUI needs
+    ├── recognition_module.py   # A module which contains functions and classes to generate the GUI
     └── ui_module.py   # A module which contains the function to run the app
 ```
