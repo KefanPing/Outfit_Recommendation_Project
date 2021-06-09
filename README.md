@@ -74,10 +74,10 @@ c) Then you will see the app!
 ├── models   # This folder contains everything related to the models: data, models themselves, training code
 │   ├── data   # Data for training models from Kaggle
 │   ├── models   # A google drive folder which contains our trained models
-|   │   ├── model_sub   # A model that distinguishes tops, bottoms, and shoes
-|   │   ├── model_top   # A model that recognizes the type, color, gender, season, and usage of tops
-|   │   ├── model_bottom   # A model that recognizes the type, color, gender, season, and usage of bottoms
-|   │   └── model_shoes   # A model that recognizes the type, color, gender, season, and usage of shoes
+│   │   ├── model_sub   # A model that distinguishes tops, bottoms, and shoes
+│   │   ├── model_top   # A model that recognizes the type, color, gender, season, and usage of tops
+│   │   ├── model_bottom   # A model that recognizes the type, color, gender, season, and usage of bottoms
+│   │   └── model_shoes   # A model that recognizes the type, color, gender, season, and usage of shoes
 │   ├── train_module.py   # A module which contains functions we used to train the models
 │   └── training.py   # Steps that we train the models
 ├── pictures   # Pictures used in this repo
