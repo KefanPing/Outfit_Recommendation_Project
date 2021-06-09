@@ -14,7 +14,7 @@
 
 [6. Start the app](#6)
 
-[7. File structure](#7)
+[7. Repo structure](#7)
 
 <h2 id="0">0.Group contribution</h2>
 
@@ -46,7 +46,7 @@ The program randomly selects a top, and we look for the same gender, the same se
 
 <br>
 <h2 id="5">5. Limitations</h2>
-First of all, although our data is very large and the accuracy of the test set is very high, we found that our program is not suitable for all the pictures we randomly searched from Google. First, we think our data has bias, which we talked in "A special explanation for data cleaning and analysis(bias).ipynb". In addition, it seems partially to be due to changes in people's thinking about fashion, or perhaps because the dataset is relatively old. 
+First of all, although our data is very large and the accuracy of the test set is very high, we found that our program is not suitable for all the pictures we randomly searched from Google. We think our data is with bias, which we talked about in "A special explanation for data cleaning and analysis(bias).ipynb". In addition, it seems partially to be due to changes in people's thinking about fashion, or perhaps because the dataset is relatively old. 
 
 
 <br>
@@ -65,7 +65,7 @@ b) Next type the following code in any Python environment:
 c) Then you will see the app!
 
 
-<h2 id="7">7. File structure</h2>
+<h2 id="7">7. Repo structure</h2>
 
 ```
 ├── A special explanation for data cleaning and analysis(bias).ipynb   # A note that analyzes bias of the data set used in this project
