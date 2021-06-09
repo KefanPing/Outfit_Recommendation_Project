@@ -25,4 +25,11 @@ The program randomly selects a top, and we look for the same gender, the same se
 ![ORP2](pictures/IMG_0159.jpg)
 
 <br>
-4) To start the app, download ui_module.py, UI.py, and models from this repo to the same folder and run UI.py, then you will see our app (see the first diagram in this README.md).
+4) To start the app: 
+                   a) First download ui_module.py, recognition_module.py, and models from this repo to the same folder. 
+                   b) Next type the following code in any Python environment:
+                   ```python
+                   from ui_module import*
+                   run_ui()
+                   ```
+                   c) Then you will see the app!
