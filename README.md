@@ -26,10 +26,13 @@ The program randomly selects a top, and we look for the same gender, the same se
 
 <br>
 4) To start the app: 
-                   a) First download ui_module.py, recognition_module.py, and models from this repo to the same folder. 
-                   b) Next type the following code in any Python environment:
-                   ```python
-                   from ui_module import*
-                   run_ui()
-                   ```
-                   c) Then you will see the app!
+
+a) First download ui_module.py, recognition_module.py, and models from this repo to the same folder. 
+
+b) Next type the following code in any Python environment:
+```
+   from ui_module import*
+   run_ui()    
+```   
+
+c) Then you will see the app!
