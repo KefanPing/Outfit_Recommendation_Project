@@ -5,5 +5,5 @@ matplotlib
 numpy
 colorsys
 PIL
-scipy.spatial
+scipy
 webcolors
