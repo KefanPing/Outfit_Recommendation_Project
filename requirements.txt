@@ -1,0 +1,9 @@
+###### Requirements without Version Specifiers ######`
+tensorflow
+cv2
+matplotlib
+numpy
+colorsys
+PIL
+scipy.spatial
+webcolors
