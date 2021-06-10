@@ -16,7 +16,7 @@
 
 [7. Repo structure](#7)
 
-<h2 id="0">0.Group contribution</h2>
+<h2 id="0">0. Group contribution</h2>
 
 Chengwei Hu brought the inspiration for the app, designed the GUI appearance, cleaned the data, led training of the models. 
 
