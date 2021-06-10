@@ -56,6 +56,11 @@ To start the app:
 
 a) First download ui_module.py, recognition_module.py, and models from this repo to the same folder. 
 
+Install all the packages:
+```
+   pip install -r requirements.txt
+```
+
 b) Next type the following code in any Python environment:
 ```
    from ui_module import*
