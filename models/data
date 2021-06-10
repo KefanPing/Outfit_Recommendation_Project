@@ -1,3 +1,5 @@
 https://www.kaggle.com/paramaggarwal/fashion-product-images-small
 
 Here is the link of our training data from kaggle. 
+You can download the a zipped file. 
+There are a style.cvs contain the data of the cothes and a images folder contain the images of clothes named by id. Id is in the style.cvs.
