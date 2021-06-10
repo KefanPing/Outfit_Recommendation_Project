@@ -163,37 +163,4 @@ foot_base_model.save("/content/drive/MyDrive/model_2.2")
 
 #!zip -r '"foot_model.zip"' '"foot_model"'
 
-"""# Model.2_1 predict which type of top wear"""
-
-styles = get_df()
-styles.head()
-
-
-
-
-
-styles_model = build_model(80,60)
-
-styles_model.summary()
-
-from tensorflow.keras.utils import plot_model
-plot_model(styles_model)
-
-styles_model.compile(optimizer='adam',
-              loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
-              metrics=['accuracy'])
-
-styles_history = styles_model.fit(styles_train, 
-                    epochs=40, 
-                    steps_per_epoch = 200,
-                    validation_data = styles_val)
-
-styles_model.evaluate(styles_test)
-
-#path = ''
-#Top_model.save(path)
-
-
-
-
 
