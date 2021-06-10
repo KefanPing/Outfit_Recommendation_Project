@@ -18,7 +18,7 @@
 
 <h2 id="0">0.Group contribution</h2>
 
-Chengwei Hu brought the inspiration for the app, designed the main structure，cleaned the data, led training of the models. 
+Chengwei Hu brought the inspiration for the app, designed the main structure, cleaned the data, led training of the models. 
 
 Kefan Ping wrote the data acquisition, led the recommendation system, wrote the data exploratory analysis. 
 
