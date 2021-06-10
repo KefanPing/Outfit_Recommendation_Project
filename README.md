@@ -92,7 +92,8 @@ c) Then you will see the app!
 │   ├── top_question.png   
 │   └── tutorial.png   
 ├── proposal.md   # Our original proposal
-└── py   # All you need to run the app
-    ├── recognition_module.py   # A module which contains functions and classes to generate the GUI
-    └── ui_module.py   # A module which contains the function to run the app
+├── py   # All you need to run the app
+│   ├── recognition_module.py   # A module which contains functions and classes to generate the GUI
+│   └── ui_module.py   # A module which contains the function to run the app
+└── requirements.txt # The packages
 ```
