@@ -18,11 +18,11 @@
 
 <h2 id="0">0.Group contribution</h2>
 
-Kefan Ping led the recommendation system, wrote the data exploratory analysis.
+Chengwei Hu brought the inspiration for the app, designed the main structure，cleaned the data, led training of the models. 
 
-Chengwei Hu led training of the four models, designed the main structure of the app.
+Kefan Ping wrote the data acquisition, led the recommendation system, wrote the data exploratory analysis. 
 
-and we wrote the data acquisition and the Graphical User Interface together.
+And we wrote the Graphical User Interface together. 
 
 <h2 id="1">1. Intro</h2> Do you sometimes (definitely not during the final exams week) stand in front of your closet and think deeply about "what should I wear today?!", "how do I pair up clothes today to make me more fashionable?!". Everyone defines fashion personally, but there are always some methods and ways that are fashionable for most people. What a person wears can also clearly show how that person's character and taste are. For people who don't have time to think about this, they may need to use an app to improve their sense of fashion, such as an outfit recommendation app. In general, we have implemented such a local app which can store photo of clothes owned by users and recommend what to wear (top, bottom, and shoes) today.
 
