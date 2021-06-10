@@ -172,3 +172,114 @@ def make_input_xx(x):#make_input_array_subcate(styles)
 
   return x_train,x_val,x_test
   
+    
+def my_le(styles):
+  """
+  This function encode the data 
+  input: styles, dataframe we want to encode
+  output; styles, dataframe we encoded
+      articleTypeLB,genderLB,baseColourLB,seasonLB,usageLB : all the labelEncoders
+  """
+  articleTypeLB = LabelEncoder()
+  genderLB = LabelEncoder()
+  baseColourLB = LabelEncoder()
+  seasonLB = LabelEncoder()
+  usageLB = LabelEncoder()
+
+
+  #
+
+
+  styles['articleType'] = articleTypeLB.fit_transform(styles['articleType'])
+  styles['gender'] = genderLB.fit_transform(styles['gender'])
+  styles['baseColour'] = baseColourLB.fit_transform(styles['baseColour'])
+  styles['season'] = seasonLB.fit_transform(styles['season'])
+  styles['usage'] = usageLB.fit_transform(styles['usage'])
+  return styles,articleTypeLB,genderLB,baseColourLB,seasonLB,usageLB
+
+def get_234_df(x):
+  """
+  This function get the dataframe for model2.1,2.2,2.3
+  input: x, the col we want
+  output: the dataframe only for x
+  """
+    styles = pd.read_csv("styles.csv", error_bad_lines=False)
+    styles = styles.drop(["productDisplayName"],axis = 1)
+    styles = styles.drop(["year"],axis = 1)
+    styles = styles[(styles.masterCategory=='Apparel')| (styles.masterCategory=='Footwear')]
+    styles = styles.drop(styles[styles["subCategory"] == "Innerwear"].index)
+    styles = styles.dropna()
+    styles = df_drop(styles,"subCategory", ["Apparel Set", "Dress","Loungewear and Nightwear","Saree","Socks"])
+    styles["subCategory"] = styles["subCategory"].transform(lambda x: "Footwear" if(x in ["Shoes","Flip Flops","Sandal"]) else x)
+    styles = styles.drop(labels=[6695,16194,32309,36381,40000], axis=0)
+    styles = styles[styles.subCategory == x]
+    group_color(styles)
+    styles.baseColour=styles.colorgroup
+
+    return styles
+
+def build_model(width, height, articleTypeLB,genderLB,baseColourLB,seasonLB,usageLB):
+  """
+  build the machine learning model. similar to the previous one
+  """
+
+    # -------------------------
+    res50 = keras.applications.ResNet50(weights='imagenet', include_top=False, input_shape=(80,60,3))
+    res50.trainable=False
+    inputs = keras.Input(shape=(width,height,3),name = "images")
+    x = res50(inputs, training=False)
+    
+    x = layers.Flatten()(x)
+    x = layers.Dense(1024, activation='relu')(x)
+    # -------------------------
+
+    article_branch = make_branch(x, len(articleTypeLB.classes_), 'softmax', 'articleType')
+    gender_branch = make_branch(x, len(genderLB.classes_), 'softmax', 'gender')
+    color_branch = make_branch(x, len(baseColourLB.classes_), 'softmax', 'baseColour')
+    season_branch = make_branch(x, len(seasonLB.classes_), 'softmax', 'season')
+    usage_branch = make_branch(x, len(usageLB.classes_), 'softmax', 'usage')
+
+    model = keras.Model(inputs=inputs,
+                outputs=[article_branch, gender_branch, color_branch, 
+                            season_branch, usage_branch]
+                       )
+    return model
+
+def make_input_array_2(df):
+  """
+  make the input dataset. similar to the previous one.
+  """
+    train_images = np.zeros((len(df.id),80,60,3))
+    for i in range(len(df.id)):
+        
+        #try:
+        ID = df.id.iloc[i]
+        path = f"images/{ID}.jpg"#/content/images   
+        img = cv2.imread(path)
+        if img.shape != (80,60,3):
+            img = image.load_img(path, target_size=(80,60,3))
+
+        #except:
+            #print(ID)
+        
+        train_images[i] = img
+    
+    data = tf.data.Dataset.from_tensor_slices(
+      (
+        {
+          "images" : train_images
+       },
+
+        {
+          "articleType" : df[["articleType"]],
+            'gender' : df[['gender']],
+            'baseColour' : df[['baseColour']],
+            'season' : df[['season']],
+            'usage' : df[['usage']]
+            
+        }
+      )
+    )
+
+    return data
+
