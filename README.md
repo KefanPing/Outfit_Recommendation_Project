@@ -18,18 +18,18 @@
 
 <h2 id="0">0. Group contribution</h2>
 
-Chengwei Hu brought the inspiration for the app, designed the GUI appearance, cleaned the data, led the training of the models. 
+Chengwei Hu brought the inspiration for the app, designed the GUI appearance, cleaned the data, and led the models' training. 
 
 Kefan Ping wrote the data acquisition, led the recommendation system, wrote the data exploratory analysis. 
 
 And we wrote the Graphical User Interface together. 
 
-<h2 id="1">1. Intro</h2> Do you sometimes (definitely not during the final exams week) stand in front of your closet and think deeply about "what should I wear today?!", "how do I pair up clothes today to make me more fashionable?!". Everyone defines fashion personally, but there are always some methods and ways that are fashionable for most people. What a person wears can also clearly show how that person's character and taste are. For people who don't have time to think about this, they may need to use an app to improve their sense of fashion, such as an outfit recommendation app. In general, we have implemented such a local app which can store photo of clothes owned by users and recommend what to wear (top, bottom, and shoes) today.
+<h2 id="1">1. Intro</h2> Do you sometimes (definitely not during the final exams week) stand in front of your closet and think deeply about "what should I wear today?!", "how do I pair up clothes today to make me more fashionable?!". Everyone defines fashion personally, but there are always some methods and ways that are fashionable for most people. What a person wears can also clearly show how that person's character and taste are. People who don't have time to think about this may need to use an app to improve their sense of fashion, such as an outfit recommendation app. In general, we have implemented such a local app which can store photo of clothes owned by users and recommend what to wear (top, bottom, and shoes) today.
 
 <br>
-<h2 id="2">2. Use the app</h2> In this app, users can choose to add a photo from their computer (we need users to take a photo of their clothes and store it on the computer) to our app. In the process of adding pictures, this picture will be automatically recognized by our pre-trained model at one time, by type (such as T-shirt), gender (such as women), color (such as navy blue), season (such as summer), usage (such as formal, casual, sport, etc.), and path of the photo. These six types of information will be stored in the app and displayed for the user to refer to. Considering that our model is sometimes inaccurate, and to facilitate user operations, we also provide users with editing and deleting buttons. Therefore, the user can edit the information we misidentified or delete a piece of clothing.
+<h2 id="2">2. Use the app</h2> Using this app, users can choose to add a photo from their computer (we need users to take a photo of their clothes and store it on the computer) to our app. In the process of adding pictures, this picture will be automatically recognized by our pre-trained model at one time, by type (such as T-shirt), gender (such as women), color (such as navy blue), season (such as summer), usage (such as formal, casual, sport, etc.), and path of the photo. These six types of information will be stored in the app and displayed for the user to refer to. Considering that our model is sometimes inaccurate, we also provide users with editing and deleting buttons to facilitate user operations. Therefore, the user can edit the information we misidentified or delete a piece of clothing.
 
-We provide users with a "Generate Today's Outfit Recommendations" button, which can provide users with recommendations. The recommended result is composed of three pictures, namely top, bottom, and shoes. Of course, these three pictures are the user's clothes.
+We have a "Generate Today's Outfit Recommendations" button, providing users with recommendations. The recommended result is composed of three pictures, namely top, bottom, and shoes. Of course, these three pictures are the user's clothes.
 
 Below is a functional diagram of using our app:
 
@@ -38,7 +38,7 @@ Below is a functional diagram of using our app:
 <br>
 <h2 id="3">3. Models</h2> Behind such an app, we have four neural network models and a recommendation system.
 
-For our neural network models: The first model (with accuracy over 99%) is used to identify whether the clothes are tops or bottoms or shoes. After this, the photo will be directed to one of the other three models based on the results of the first model (please see the picture below). These three similar but not exactly the same models (with overall accuracy around 80% ) will identify type(65), gender(5), color(46), season(4), and usage(8).
+For our neural network models: The first model (with accuracy over 99%) is used to identify whether the clothes are tops, bottoms, or shoes. After this, the photo will be directed to one of the other three models based on the results of the first model (please see the picture below). These three similar but not exactly the same models (with overall accuracy around 80% ) will identify type(65), gender(5), color(46), season(4), and usage(8).
 
 Below is a flow chart of our recognition process:
 
@@ -52,7 +52,7 @@ The program randomly selects a top, and we look for the same gender, the same se
 
 <br>
 <h2 id="5">5. Limitations</h2>
-First of all, although our data is very large and the accuracy of the test set is very high, we found that our program is not suitable for all the pictures we randomly searched from Google. We think our data is with bias, which we talked about in "A special explanation for data cleaning and analysis(bias).ipynb". In addition, it seems partial to be due to changes in people's thinking about fashion, or perhaps because the dataset is relatively old. 
+First of all, although our data is huge and the accuracy of the test set is very high, we found that our program is not suitable for all the pictures we randomly searched from Google. Therefore, we think our data is with bias, which is discussed in "A special explanation for data cleaning and analysis(bias).ipynb". In addition, it seems partial to be due to changes in people's thinking about fashion, or perhaps because the dataset is relatively old. 
 
 
 <br>
@@ -67,7 +67,7 @@ Install all the packages:
    pip install -r requirements.txt
 ```
 
-b) Next type the following code in any Python environment:
+b) Next, type the following code in any Python environment:
 ```
    from ui_module import*
    run_ui()    
