@@ -18,7 +18,7 @@
 
 <h2 id="0">0. Group contribution</h2>
 
-Chengwei Hu brought the inspiration for the app, designed the GUI appearance, cleaned the data, led training of the models. 
+Chengwei Hu brought the inspiration for the app, designed the GUI appearance, cleaned the data, led the training of the models. 
 
 Kefan Ping wrote the data acquisition, led the recommendation system, wrote the data exploratory analysis. 
 
@@ -27,9 +27,9 @@ And we wrote the Graphical User Interface together.
 <h2 id="1">1. Intro</h2> Do you sometimes (definitely not during the final exams week) stand in front of your closet and think deeply about "what should I wear today?!", "how do I pair up clothes today to make me more fashionable?!". Everyone defines fashion personally, but there are always some methods and ways that are fashionable for most people. What a person wears can also clearly show how that person's character and taste are. For people who don't have time to think about this, they may need to use an app to improve their sense of fashion, such as an outfit recommendation app. In general, we have implemented such a local app which can store photo of clothes owned by users and recommend what to wear (top, bottom, and shoes) today.
 
 <br>
-<h2 id="2">2. Use the app</h2> In this app, users can choose to add a photo from their own computer (we need users to take a photo of their own clothes and store it in the computer) to our app. In the process of adding pictures, this picture will be automatically recognized by our pre-trained model at one time, by type (such as T-shirt), gender (such as women), color (such as navy blue), season (such as summer), usage (such as formal, casual, sport, etc.), and path of the photo. These six types of information will be stored in the app and displayed for the user's reference. Considering that our model is sometimes inaccurate, and in order to facilitate user operations, we also provide users with editing and deleting buttons. Therefore, the user can edit the information we misidentified or delete a piece of clothing.
+<h2 id="2">2. Use the app</h2> In this app, users can choose to add a photo from their computer (we need users to take a photo of their clothes and store it on the computer) to our app. In the process of adding pictures, this picture will be automatically recognized by our pre-trained model at one time, by type (such as T-shirt), gender (such as women), color (such as navy blue), season (such as summer), usage (such as formal, casual, sport, etc.), and path of the photo. These six types of information will be stored in the app and displayed for the user to refer to. Considering that our model is sometimes inaccurate, and to facilitate user operations, we also provide users with editing and deleting buttons. Therefore, the user can edit the information we misidentified or delete a piece of clothing.
 
-We provide users with a "Generate Today's Outfit Recommendations" button, which can provide users with recommendations. The recommended result is composed of three pictures, namely top, bottom, and shoes. Of course, these three pictures are the user's own clothes.
+We provide users with a "Generate Today's Outfit Recommendations" button, which can provide users with recommendations. The recommended result is composed of three pictures, namely top, bottom, and shoes. Of course, these three pictures are the user's clothes.
 
 Below is a functional diagram of using our app:
 
@@ -52,7 +52,7 @@ The program randomly selects a top, and we look for the same gender, the same se
 
 <br>
 <h2 id="5">5. Limitations</h2>
-First of all, although our data is very large and the accuracy of the test set is very high, we found that our program is not suitable for all the pictures we randomly searched from Google. We think our data is with bias, which we talked about in "A special explanation for data cleaning and analysis(bias).ipynb". In addition, it seems partially to be due to changes in people's thinking about fashion, or perhaps because the dataset is relatively old. 
+First of all, although our data is very large and the accuracy of the test set is very high, we found that our program is not suitable for all the pictures we randomly searched from Google. We think our data is with bias, which we talked about in "A special explanation for data cleaning and analysis(bias).ipynb". In addition, it seems partial to be due to changes in people's thinking about fashion, or perhaps because the dataset is relatively old. 
 
 
 <br>
@@ -81,7 +81,7 @@ c) Then you will see the app!
 ```
 .
 ├── A special explanation for data cleaning and analysis(bias).ipynb   # A note that analyzes bias of the data set used in this project
-├── LICENSE   # The lisence
+├── LICENSE   # The license
 ├── README.md   # The readme file
 ├── models   # This folder contains everything related to the models: data, models themselves, training code
 │   ├── data   # Data for training models from Kaggle
@@ -99,7 +99,7 @@ c) Then you will see the app!
 │   └── tutorial.png   
 ├── proposal.md   # Our original proposal
 ├── py   # All you need to run the app
-│   ├── recognition_module.py   # A module which contains functions and classes to generate the GUI
-│   └── ui_module.py   # A module which contains the function to run the app
+│   ├── recognition_module.py   # A module that contains functions and classes to generate the GUI
+│   └── ui_module.py   # A module that contains the function to run the app
 └── requirements.txt # The packages
 ```
