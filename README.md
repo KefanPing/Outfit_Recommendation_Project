@@ -1,7 +1,5 @@
 # Contents
 
-[0. Group contribution](#0)
-
 [1. Intro](#1)
 
 [2. Use the app](#2)
@@ -16,13 +14,6 @@
 
 [7. Repo structure](#7)
 
-<h2 id="0">0. Group contribution</h2>
-
-Chengwei Hu brought the inspiration for the app, designed the GUI appearance, cleaned the data, and led the models' training. 
-
-Kefan Ping wrote the data acquisition, led the recommendation system, wrote the data exploratory analysis. 
-
-And we wrote the Graphical User Interface together. 
 
 <h2 id="1">1. Intro</h2> Do you sometimes (definitely not during the final exams week) stand in front of your closet and think deeply about "what should I wear today?!", "how do I pair up clothes today to make me more fashionable?!". Everyone defines fashion personally, but there are always some methods and ways that are fashionable for most people. What a person wears can also clearly show how that person's character and taste are. People who don't have time to think about this may need to use an app to improve their sense of fashion, such as an outfit recommendation app. In general, we have implemented such a local app which can store photo of clothes owned by users and recommend what to wear (top, bottom, and shoes) today.
 
